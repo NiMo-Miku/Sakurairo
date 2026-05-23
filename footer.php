@@ -60,6 +60,8 @@ $reception_background = iro_opt('reception_background');
           <?php endif; ?>
         <a href="https://github.com/mirai-mamori/Sakurairo" rel="noopener" target="_blank">Theme Sakurairo</a>
         <a href="https://docs.fuukei.org/" rel="noopener" target="_blank">by Fuukei</a>
+        | <a href="https://github.com/NiMo-Miku" rel="noopener" target="_blank">Fork by NiMo</a>
+        <a href="https://kirinkinoko.site/2026/kirinkinoko/" rel="noopener" target="_blank">About NiMo</a>
       </div>
     </div><!-- .site-info -->
   </footer><!-- #colophon -->
