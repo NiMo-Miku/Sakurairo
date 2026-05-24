@@ -501,7 +501,9 @@ display:none;
   }
 }
 .sakura-icon{
-    width:max-content;height:max-content;margin: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
 }
 .sakura-svg {
 animation: slow-rotate 10s linear infinite;
