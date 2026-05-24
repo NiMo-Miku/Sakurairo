@@ -3972,6 +3972,12 @@ h6::before {
 
 .ghcard {
   position: relative;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.ghcard:hover {
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12) !important;
+  transform: translateY(-1px);
 }
 
 .ghcard img {

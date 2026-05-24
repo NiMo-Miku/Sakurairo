@@ -2792,24 +2792,31 @@ function register_shortcodes() {
         $stars = $data['stargazers_count'];
         $html_url = $data['html_url'];
 
-        // 仓库图标 + 默认颜色点
-        $lang_color = "green"; // 可拓展为语言颜色映射
+        // 语言颜色映射
+        $lang_colors = array(
+            'JavaScript' => '#f1e05a', 'TypeScript' => '#3178c6', 'Python' => '#3572A5',
+            'Java' => '#b07219', 'Go' => '#00ADD8', 'Rust' => '#dea584', 'Ruby' => '#701516',
+            'PHP' => '#4F5D95', 'C++' => '#f34b7d', 'C' => '#555555', 'C#' => '#178600',
+            'Swift' => '#F05138', 'Kotlin' => '#A97BFF', 'Dart' => '#00B4AB', 'Vue' => '#41b883',
+            'CSS' => '#563d7c', 'HTML' => '#e34c26', 'Shell' => '#89e051', 'SCSS' => '#c6538c',
+        );
+        $lang_color = isset($lang_colors[$language]) ? $lang_colors[$language] : '#8b8b8b';
         $description = esc_html($description);
         $language = esc_html($language);
         return sprintf(
-            '<div class="ghcard" style="border:1px solid #ddd; border-radius:10px; padding:16px; max-width:300px; box-shadow:0 2px 6px rgba(0,0,0,0.1); background:#fff;">
-                <div style="display:flex; align-items:center; margin-bottom:10px;">
-                    <i class="fas fa-book" style="margin-right:8px; color:#555;"></i>
-                    <a href="%s" target="_blank" style="color:#1a73e8; font-weight:bold; text-decoration:none;">%s</a>
+            '<div class="ghcard" style="display:flex; align-items:center; gap:16px; border:1px solid #e1e4e8; border-radius:8px; padding:14px 20px; max-width:100%%; box-shadow:0 1px 3px rgba(0,0,0,0.08); background:#fff; flex-wrap:wrap;">
+                <div style="display:flex; align-items:center; gap:6px; flex-shrink:0;">
+                    <i class="fab fa-github" style="font-size:18px; color:#333;"></i>
+                    <a href="%s" target="_blank" style="color:#0366d6; font-weight:600; text-decoration:none; font-size:15px; white-space:nowrap;">%s</a>
                 </div>
-                <div style="font-size:14px; color:#444; margin-bottom:12px;">%s</div>
-                <div style="display:flex; align-items:center; gap:16px; font-size:14px; color:#666;">
-                    <div style="display:flex; align-items:center;">
-                        <span style="width:10px; height:10px; background-color:%s; border-radius:50%%; display:inline-block; margin-right:6px;"></span>
+                <div style="flex:1; min-width:0; font-size:13px; color:#586069; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">%s</div>
+                <div style="display:flex; align-items:center; gap:16px; font-size:13px; color:#586069; flex-shrink:0;">
+                    <div style="display:flex; align-items:center; gap:4px;">
+                        <span style="width:10px; height:10px; background-color:%s; border-radius:50%%; display:inline-block; flex-shrink:0;"></span>
                         %s
                     </div>
-                    <div style="display:flex; align-items:center;">
-                        <i class="far fa-star" style="margin-right:4px;"></i>
+                    <div style="display:flex; align-items:center; gap:4px;">
+                        <i class="far fa-star"></i>
                         %d
                     </div>
                 </div>
