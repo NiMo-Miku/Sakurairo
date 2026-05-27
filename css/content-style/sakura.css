@@ -289,48 +289,6 @@ h1.entry-title {
     pointer-events: none
 }
 
-/* Reset highlight-wrap styles for preformatted blocks */
-.entry-content .highlight-wrap.wp-block-preformatted,
-.entry-content .wp-block-preformatted.highlight-wrap {
-    position: static;
-    background: revert;
-    border-radius: revert;
-    font: revert;
-    line-height: revert;
-    margin-bottom: revert;
-    max-width: revert;
-    padding-top: revert;
-    box-shadow: none;
-    color: revert;
-    text-shadow: revert;
-    overflow: revert;
-}
-
-.entry-content .highlight-wrap.wp-block-preformatted:before,
-.entry-content .wp-block-preformatted.highlight-wrap:before {
-    content: none;
-}
-
-.entry-content .highlight-wrap.wp-block-preformatted code,
-.entry-content .wp-block-preformatted.highlight-wrap code {
-    background: revert;
-    color: revert;
-    font-family: revert;
-    padding: revert;
-    text-shadow: revert;
-    border-radius: revert;
-}
-
-.entry-content .highlight-wrap.wp-block-preformatted code[data-rel]:before,
-.entry-content .wp-block-preformatted.highlight-wrap code[data-rel]:before {
-    content: none;
-}
-
-.entry-content .highlight-wrap.wp-block-preformatted .copy-code,
-.entry-content .wp-block-preformatted.highlight-wrap .copy-code {
-    display: none;
-}
-
 .hljs {
     display: block;
     overflow-x: auto;
