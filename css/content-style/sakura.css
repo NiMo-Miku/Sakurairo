@@ -289,22 +289,25 @@ h1.entry-title {
     pointer-events: none
 }
 
-/* Undo highlight-wrap styles on preformatted blocks */
+/* Undo highlight-wrap / hljs styles on preformatted blocks */
 .entry-content .highlight-wrap.wp-block-preformatted,
-.entry-content .wp-block-preformatted.highlight-wrap {
+.entry-content .wp-block-preformatted.highlight-wrap,
+.entry-content .wp-block-preformatted.hljs,
+.entry-content .wp-block-preformatted.hljs.highlight-wrap {
     position: static;
     background: transparent;
     border-radius: 0;
     font: inherit;
     color: inherit;
-    padding-top: 0;
+    padding: revert;
     box-shadow: none;
     text-shadow: inherit;
     z-index: auto;
 }
 
 .entry-content .highlight-wrap.wp-block-preformatted:before,
-.entry-content .wp-block-preformatted.highlight-wrap:before {
+.entry-content .wp-block-preformatted.highlight-wrap:before,
+.entry-content .wp-block-preformatted.hljs:before {
     display: none;
 }
 
@@ -314,10 +317,12 @@ h1.entry-title {
 }
 
 .entry-content .highlight-wrap.wp-block-preformatted code,
-.entry-content .wp-block-preformatted.highlight-wrap code {
+.entry-content .wp-block-preformatted.highlight-wrap code,
+.entry-content .wp-block-preformatted.hljs code {
     background: transparent;
     color: inherit;
     font-family: inherit;
+    padding: revert;
 }
 
 .entry-content .highlight-wrap.wp-block-preformatted code[data-rel]:before,

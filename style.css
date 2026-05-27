@@ -3680,15 +3680,17 @@ input#upload-img-file {
   pointer-events: none;
 }
 
-/* Undo highlight-wrap styles on preformatted blocks */
+/* Undo highlight-wrap / hljs styles on preformatted blocks */
 .wp-block-preformatted.highlight-wrap,
-.highlight-wrap.wp-block-preformatted {
+.highlight-wrap.wp-block-preformatted,
+.wp-block-preformatted.hljs,
+.wp-block-preformatted.hljs.highlight-wrap {
   position: static;
   background: transparent;
   border-radius: 0;
   font: inherit;
   color: inherit;
-  padding-top: 0;
+  padding: revert;
   box-shadow: none;
   text-shadow: inherit;
   z-index: auto;
@@ -3697,7 +3699,8 @@ input#upload-img-file {
 }
 
 .wp-block-preformatted.highlight-wrap:before,
-.highlight-wrap.wp-block-preformatted:before {
+.highlight-wrap.wp-block-preformatted:before,
+.wp-block-preformatted.hljs:before {
   display: none;
 }
 
@@ -3707,10 +3710,12 @@ input#upload-img-file {
 }
 
 .wp-block-preformatted.highlight-wrap code,
-.highlight-wrap.wp-block-preformatted code {
+.highlight-wrap.wp-block-preformatted code,
+.wp-block-preformatted.hljs code {
   background: transparent;
   color: inherit;
   font-family: inherit;
+  padding: revert;
 }
 
 .wp-block-preformatted.highlight-wrap code[data-rel]:before,
