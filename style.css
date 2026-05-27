@@ -3680,6 +3680,50 @@ input#upload-img-file {
   pointer-events: none;
 }
 
+/* Reset highlight-wrap styles for preformatted blocks */
+.wp-block-preformatted.highlight-wrap,
+.highlight-wrap.wp-block-preformatted {
+  position: static;
+  background: revert;
+  border-radius: revert;
+  font: revert;
+  line-height: revert;
+  margin-bottom: revert;
+  margin-left: revert;
+  margin-right: revert;
+  max-width: revert;
+  padding-top: revert;
+  box-shadow: none;
+  color: revert;
+  text-shadow: revert;
+  overflow: revert;
+}
+
+.wp-block-preformatted.highlight-wrap:before,
+.highlight-wrap.wp-block-preformatted:before {
+  content: none;
+}
+
+.wp-block-preformatted.highlight-wrap code,
+.highlight-wrap.wp-block-preformatted code {
+  background: revert;
+  color: revert;
+  font-family: revert;
+  padding: revert;
+  text-shadow: revert;
+  border-radius: revert;
+}
+
+.wp-block-preformatted.highlight-wrap code[data-rel]:before,
+.highlight-wrap.wp-block-preformatted code[data-rel]:before {
+  content: none;
+}
+
+.wp-block-preformatted.highlight-wrap .copy-code,
+.highlight-wrap.wp-block-preformatted .copy-code {
+  display: none;
+}
+
 .hljs {
   display: block;
   overflow-x: auto;
