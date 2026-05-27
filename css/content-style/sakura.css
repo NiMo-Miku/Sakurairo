@@ -289,20 +289,24 @@ h1.entry-title {
     pointer-events: none
 }
 
-/* Undo highlight-wrap / hljs styles on preformatted blocks */
+/* Restore theme original pre styling, suppress code-highlight decorations */
 .entry-content .highlight-wrap.wp-block-preformatted,
 .entry-content .wp-block-preformatted.highlight-wrap,
 .entry-content .wp-block-preformatted.hljs,
 .entry-content .wp-block-preformatted.hljs.highlight-wrap {
+    font: 15px/22px 'Fira Code','Noto Sans SC';
+    background: rgba(255,255,255,.5);
+    border-radius: 10px;
+    padding: 1em;
+    overflow: auto;
+    max-width: 100%;
+    color: #000;
     position: static;
-    background: transparent;
-    border-radius: 0;
-    font: inherit;
-    color: inherit;
-    padding: revert;
     box-shadow: none;
-    text-shadow: inherit;
+    text-shadow: none;
     z-index: auto;
+    margin-bottom: 1.6em;
+    line-height: 1.6;
 }
 
 .entry-content .highlight-wrap.wp-block-preformatted:before,
@@ -314,15 +318,6 @@ h1.entry-title {
 .entry-content .highlight-wrap.wp-block-preformatted .copy-code,
 .entry-content .wp-block-preformatted.highlight-wrap .copy-code {
     display: none;
-}
-
-.entry-content .highlight-wrap.wp-block-preformatted code,
-.entry-content .wp-block-preformatted.highlight-wrap code,
-.entry-content .wp-block-preformatted.hljs code {
-    background: transparent;
-    color: inherit;
-    font-family: inherit;
-    padding: revert;
 }
 
 .entry-content .highlight-wrap.wp-block-preformatted code[data-rel]:before,

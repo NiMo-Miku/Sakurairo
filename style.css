@@ -3680,22 +3680,26 @@ input#upload-img-file {
   pointer-events: none;
 }
 
-/* Undo highlight-wrap / hljs styles on preformatted blocks */
+/* Restore theme original pre styling, suppress code-highlight decorations */
 .wp-block-preformatted.highlight-wrap,
 .highlight-wrap.wp-block-preformatted,
 .wp-block-preformatted.hljs,
 .wp-block-preformatted.hljs.highlight-wrap {
+  font: 15px/22px 'Fira Code','Noto Sans SC';
+  background: rgba(255,255,255,.5);
+  border-radius: 10px;
+  padding: 1em;
+  overflow: auto;
+  max-width: 100%;
+  color: #000;
   position: static;
-  background: transparent;
-  border-radius: 0;
-  font: inherit;
-  color: inherit;
-  padding: revert;
   box-shadow: none;
-  text-shadow: inherit;
+  text-shadow: none;
   z-index: auto;
   margin-left: 0;
   margin-right: 0;
+  margin-bottom: 1.6em;
+  line-height: 1.6;
 }
 
 .wp-block-preformatted.highlight-wrap:before,
@@ -3707,15 +3711,6 @@ input#upload-img-file {
 .wp-block-preformatted.highlight-wrap .copy-code,
 .highlight-wrap.wp-block-preformatted .copy-code {
   display: none;
-}
-
-.wp-block-preformatted.highlight-wrap code,
-.highlight-wrap.wp-block-preformatted code,
-.wp-block-preformatted.hljs code {
-  background: transparent;
-  color: inherit;
-  font-family: inherit;
-  padding: revert;
 }
 
 .wp-block-preformatted.highlight-wrap code[data-rel]:before,
