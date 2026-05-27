@@ -3680,6 +3680,44 @@ input#upload-img-file {
   pointer-events: none;
 }
 
+/* Undo highlight-wrap styles on preformatted blocks */
+.wp-block-preformatted.highlight-wrap,
+.highlight-wrap.wp-block-preformatted {
+  position: static;
+  background: transparent;
+  border-radius: 0;
+  font: inherit;
+  color: inherit;
+  padding-top: 0;
+  box-shadow: none;
+  text-shadow: inherit;
+  z-index: auto;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.wp-block-preformatted.highlight-wrap:before,
+.highlight-wrap.wp-block-preformatted:before {
+  display: none;
+}
+
+.wp-block-preformatted.highlight-wrap .copy-code,
+.highlight-wrap.wp-block-preformatted .copy-code {
+  display: none;
+}
+
+.wp-block-preformatted.highlight-wrap code,
+.highlight-wrap.wp-block-preformatted code {
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+}
+
+.wp-block-preformatted.highlight-wrap code[data-rel]:before,
+.highlight-wrap.wp-block-preformatted code[data-rel]:before {
+  display: none;
+}
+
 .hljs {
   display: block;
   overflow-x: auto;

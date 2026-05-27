@@ -751,6 +751,42 @@
     pointer-events: none
 }
 
+/* Undo highlight-wrap styles on preformatted blocks */
+.entry-content pre.highlight-wrap.wp-block-preformatted,
+.entry-content pre.wp-block-preformatted.highlight-wrap {
+    position: static;
+    background: transparent;
+    border-radius: 0;
+    font: inherit;
+    color: inherit;
+    padding-top: 0;
+    box-shadow: none;
+    text-shadow: inherit;
+    z-index: auto;
+}
+
+.entry-content pre.highlight-wrap.wp-block-preformatted:before,
+.entry-content pre.wp-block-preformatted.highlight-wrap:before {
+    display: none;
+}
+
+.entry-content pre.highlight-wrap.wp-block-preformatted .copy-code,
+.entry-content pre.wp-block-preformatted.highlight-wrap .copy-code {
+    display: none;
+}
+
+.entry-content pre.highlight-wrap.wp-block-preformatted code,
+.entry-content pre.wp-block-preformatted.highlight-wrap code {
+    background: transparent;
+    color: inherit;
+    font-family: inherit;
+}
+
+.entry-content pre.highlight-wrap.wp-block-preformatted code[data-rel]:before,
+.entry-content pre.wp-block-preformatted.highlight-wrap code[data-rel]:before {
+    display: none;
+}
+
 .entry-content pre .hljs {
     display: block;
     overflow-x: auto;
